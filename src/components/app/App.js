@@ -1,14 +1,20 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import Styles from './styles';
+import styles from './styles';
 import CurrencyInput from '../input/CurrencyInput';
+import Header from '../header/Header';
 
 export default function App() {
   return (
-    <View style={Styles.container}>
-      <Text style={Styles.welcome}>Welcome to React Native!</Text>
-      <Text style={Styles.instructions}>To get started, edit App.js</Text>
-      <CurrencyInput />
-    </View>
+    <React.Fragment>
+      <View>
+        <Header text="Shoppii" />
+      </View>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>Welcome to Shoppii!</Text>
+        <Text style={styles.instructions}>Enter some spendings:</Text>
+        <CurrencyInput />
+      </View>
+    </React.Fragment>
   );
 }
